@@ -6,7 +6,7 @@
 
   <link href="https://d1pxv3w03ignpi.cloudfront.net/github/badger/frontend/compiled/1c44ce19af1dfe58aeddf99e8d80dc59.css" media="screen" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
-  <meta name="generator" content="nanoc 3.2.3">    
+  <meta name="generator" content="nanoc 3.2.3">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -31,9 +31,10 @@
 					</li>
           <li>
 						<a href="/account/" <%='class="active"' if @item[:title] == 'Accounts'%>>ACCOUNTS</a>
-						<ul <%='class="expanded"' if ['Accounts', 'Billing', 'Tickets'].include?(@item[:title])%>>
+						<ul <%='class="expanded"' if ['Accounts', 'Billing', 'Tickets', 'Linked Accounts'].include?(@item[:title])%>>
               <li class="website"><a href="/billing/" <%='class="active"' if @item[:title] == 'Billing'%>>BILLING</a></li>
 		          <li class="website"><a href="/tickets/" <%='class="active"' if @item[:title] == 'Tickets'%>>TICKETS</a></li>
+		          <li class="website"><a href="/linked_accounts/" <%='class="active"' if @item[:title] == 'Linked Accounts'%>>LINKED ACCOUNTS</a></li>
             </ul>
 					</li>
           <li>

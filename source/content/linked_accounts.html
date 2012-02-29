@@ -1,0 +1,104 @@
+---
+title: Linked Accounts
+---
+
+<div class="api-method">
+  <h1>Get Linked Accounts</h1>
+  <p>Show all linked accounts for the authenticated user.</p>
+  <ul>
+    <li>
+      <p>Command</p>
+      <code class='terminal'>GET /linked_accounts</code>
+    </li>
+    <li>
+      <p>Sample Request</p>
+      <code class='json'>GET https://api.badger.com/linked_accounts</code>
+    </li>
+    <li>
+      <p>Sample Response</p>
+      <code class='json'>[
+  {
+    "status": "synced",
+    "site": "godaddy",
+    "id": 1,
+    "domain_count": 0,
+    "login": "fdsa",
+    "last_synced_at": "2012-02-24T18:06:50Z",
+    "created_at": "2012-02-17T00:25:24Z"
+  },
+  {
+    "status": "linked",
+    "site": "facebook",
+    "id": 2,
+    "domain_count": 0,
+    "login": null,
+    "last_synced_at": null,
+    "created_at": "2012-02-21T20:04:45Z"
+  },
+  {
+    "status": "linked",
+    "site": "twitter",
+    "id": 3,
+    "domain_count": 0,
+    "login": null,
+    "last_synced_at": null,
+    "created_at": "2012-02-21T20:09:00Z"
+  }
+]
+      </code>
+    </li>
+  </ul>
+</div>
+
+<div class="api-method">
+  <h1>Get Linked Account</h1>
+  <p>Show an individual linked account for the authenticated user.</p>
+  <ul>
+    <li>
+      <p>Command</p>
+      <code class='terminal'>GET /linked_accounts/:id</code>
+    </li>
+    <li>
+      <p>Sample Request</p>
+      <code class='json'>GET https://api.badger.com/linked_accounts/3</code>
+    </li>
+    <li>
+      <p>Sample Response</p>
+      <code class='json'>{
+  "status": "linked",
+  "site": "twitter",
+  "id": 3,
+  "domain_count": 0,
+  "login": null,
+  "last_synced_at": null,
+  "created_at": "2012-02-21T20:09:00Z"
+}
+      </code>
+    </li>
+  </ul>
+</div>
+
+<div class="api-method">
+  <h1>Get Linked Account Remote Info</h1>
+  <p>Return remote information about the linked account, such as username, profile pictures, etc.</p>
+  <ul>
+    <li>
+      <p>Command</p>
+      <code class='terminal'>GET /linked_accounts/:id/remote_info</code>
+    </li>
+    <li>
+      <p>Sample Request</p>
+      <code class='json'>GET https://api.badger.com/linked_accounts/3/remote_info</code>
+    </li>
+    <li>
+      <p>Sample Response</p>
+      <code class='json'>{
+  "status": "linked",
+  "name": "Badger McGee",
+  "profile_image_url": "http://pics.test.com/profile_picture.jpg",
+  "username": "badger"
+}
+      </code>
+    </li>
+  </ul>
+</div>
