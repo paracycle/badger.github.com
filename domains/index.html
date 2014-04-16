@@ -124,7 +124,7 @@
   <ul>
     <li>
       <p>Command</p>
-      <code class='terminal'>POST /domains/:domain_name</code>
+      <code class='terminal'>PUT /domains/:domain_name</code>
     </li>
     <li>
       <p>Parameters (required values are in <b>bold</b>)</p>
@@ -171,97 +171,16 @@
     </li>    
     <li>
       <p>Sample Request</p>
-      <code class='json'>POST https://api.badger.com/domains/badger1.com?privacy=false&administrator_contact_id=3&technical_contact_id=3&billing_contact_id=3</code>
+      <code class='json'>PUT https://api.badger.com/domains/badger1.com?privacy=false&administrator_contact_id=3&technical_contact_id=3&billing_contact_id=3</code>
+    </li>
+    <li>
+      <p>Sample Request (with POST)</p>
+      <code class='json'>POST https://api.badger.com/domains/badger1.com?_method=PUT&privacy=false&administrator_contact_id=3&technical_contact_id=3&billing_contact_id=3</code>
     </li>
     <li>
       <p>Sample Response</p>
       <code class='json'>{
-  "billing_contact": {
-    "zip": "12345",
-    "country": "US",
-    "fax": "",
-    "city": "San Francisco",
-    "last_name": "Smith",
-    "organization": "",
-    "state": "CA",
-    "id": 3,
-    "label": null,
-    "address2": "",
-    "phone": "1112223456",
-    "email": "johnsmith@test.com",
-    "created_at": "2011-11-11T22:38:28Z",
-    "first_name": "John",
-    "address": "123 Fake Street"
-  },
-  "locked": true,
-  "status": "active",
-  "created_registrar": "rhino",
-  "registrant_contact": {
-    "zip": "12345",
-    "country": "US",
-    "fax": "",
-    "city": "San Francisco",
-    "last_name": "Smith",
-    "organization": "",
-    "state": "CA",
-    "id": 3,
-    "label": null,
-    "address2": "",
-    "phone": "1112223456",
-    "email": "johnsmith@test.com",
-    "created_at": "2011-11-11T22:38:28Z",
-    "first_name": "John",
-    "address": "123 Fake Street"
-  },
-  "technical_contact": {
-    "zip": "12345",
-    "country": "US",
-    "fax": "",
-    "city": "San Francisco",
-    "last_name": "Smith",
-    "organization": "",
-    "state": "CA",
-    "id": 3,
-    "label": null,
-    "address2": "",
-    "phone": "1112223456",
-    "email": "johnsmith@test.com",
-    "created_at": "2011-11-11T22:38:28Z",
-    "first_name": "John",
-    "address": "123 Fake Street"
-  },
-  "updated_on": "2011-11-15T03:04:01Z",
-  "whois": "The data contained in this whois database...",
-  "updated_at": "2011-11-15T03:04:01Z",
-  "auto_renew": true,
-  "registered_on": "2011-11-15T02:07:43Z",
-  "name": "corytest.com",
-  "losing_registrar": null,
-  "id": 23,
-  "name_servers": [
-    "ns1.badger.com",
-    "ns2.badger.com"
-  ],
-  "administrator_contact": {
-    "zip": "12345",
-    "country": "US",
-    "fax": "",
-    "city": "San Francisco",
-    "last_name": "Smith",
-    "organization": "",
-    "state": "CA",
-    "id": 3,
-    "label": null,
-    "address2": "",
-    "phone": "1112223456",
-    "email": "johnsmith@test.com",
-    "created_at": "2011-11-11T22:38:28Z",
-    "first_name": "John",
-    "address": "123 Fake Street"
-  },
-  "created_at": "2011-11-15T02:07:43Z",
-  "privacy": false,
-  "expires_on": "2012-11-15T02:07:43Z"
+  "message":"Domain updates complete!"
 }</code>
     </li>
   </ul>
